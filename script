@@ -1,0 +1,3 @@
+$logpath =  C:\scriptDir\New Folder\" 
+Get-ChildItem $logpath -Recurse *.log -Force | where {$_.LastWriteTime -lt (get-date).AddDays(0)} | Remove-Item -Force
+#DrivePath
